@@ -1,0 +1,6 @@
+<?page title="Editar Anuncio" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="Editar Anuncio" border="normal">
+New Content Here!
+</window>
+</zk>

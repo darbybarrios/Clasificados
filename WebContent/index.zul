@@ -1,0 +1,54 @@
+<?page title="Clasificados" contentType="text/html;charset=UTF-8"?>
+<zk>
+
+
+<div align="center">
+<window border="normal" width="900px" height="750px" id="grContenedor" apply="controladores.index">
+<borderlayout>
+				<north border="none">
+				
+				</north>
+				
+				
+				<center border="none" autoscroll="true">
+					<div>
+					<space height="150px" />	
+						
+					
+					<vbox  align="center" width="50%">
+								<grid oddRowSclass="non-odd">
+							
+								 <columns>
+						            <column hflex="3"></column>
+						            <column hflex="4"></column>
+           
+        						</columns>
+							
+								<rows >
+									<row >
+									<div align="right">
+									<label value="Usuario:" />
+									</div>
+									<textbox id="txtUsuario" width="150px" />
+									</row>
+									<row>
+									<div align="right">
+									<label value="Contraseña:"/>
+									</div>
+									<textbox id="txtContrasena" type="password"	width="150px" />
+									</row>
+								</rows>
+					    	</grid>
+							<button id="btnEntrar" onClick="" label="Entrar" />
+					
+							</vbox>
+				
+				</div>
+					
+				</center>
+				<south border="none">
+				</south>
+</borderlayout>
+</window>
+</div>
+</zk>

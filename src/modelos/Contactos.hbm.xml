@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 23/05/2016 01:08:15 PM by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="modelos.Contactos" table="contactos" schema="public">
+        <id name="id" type="int">
+            <column name="id" />
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" />
+        </property>
+        <property name="empresa" type="string">
+            <column name="empresa" />
+        </property>
+        <property name="fijo" type="string">
+            <column name="fijo" />
+        </property>
+        <property name="celular" type="string">
+            <column name="celular" />
+        </property>
+        <property name="direccion" type="string">
+            <column name="direccion" />
+        </property>
+        <property name="ciudad" type="string">
+            <column name="ciudad" />
+        </property>
+        <property name="estado" type="string">
+            <column name="estado" />
+        </property>
+        <property name="pais" type="string">
+            <column name="pais" />
+        </property>
+        <property name="estatus" type="string">
+            <column name="estatus" />
+        </property>
+        <property name="lara" type="java.lang.Boolean">
+            <column name="lara" />
+        </property>
+        <property name="caracas" type="java.lang.Boolean">
+            <column name="caracas" />
+        </property>
+        <property name="miranda" type="java.lang.Boolean">
+            <column name="miranda" />
+        </property>
+        <property name="merida" type="java.lang.Boolean">
+            <column name="merida" />
+        </property>
+        <property name="carabobo" type="java.lang.Boolean">
+            <column name="carabobo" />
+        </property>
+        <property name="zulia" type="java.lang.Boolean">
+            <column name="zulia" />
+        </property>
+        <property name="panama" type="java.lang.Boolean">
+            <column name="panama" />
+        </property>
+        <property name="todos" type="java.lang.Boolean">
+            <column name="todos" />
+        </property>        
+        <set name="anuncioses" table="anuncios" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="contacto" />
+            </key>
+            <one-to-many class="modelos.Anuncios" />
+        </set>
+    </class>
+</hibernate-mapping>

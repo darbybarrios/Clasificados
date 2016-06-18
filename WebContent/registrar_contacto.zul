@@ -1,0 +1,76 @@
+<?page title="Nuevo Contacto" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windNuevoContacto" title="Nuevo Contacto" border="normal" width="650px" apply="controladores.registrar_contactos">
+	<div>	
+		<grid>
+			<columns>
+				<column width="200px"/>
+                <column width="100%" />
+			</columns>
+			<rows>
+				<row>
+					<label  value="Contacto Principal:"  />
+					<div>
+						<textbox id="txtNombre" constraint="no empty"/>
+	                    <textbox id="txtApellido" />
+                    </div>                    
+                                       
+				</row>
+				<row>
+					<label value="Empresa:"  />                    
+                    <textbox  id="txtEmpresa" width="354px"/>                    
+				</row>
+				<row>
+					<label value="Correo"  />                    
+                    <textbox id="txtCorreo" />                   
+				</row>
+				<row>
+					<label value="Telefonos:"  />                 
+                    <textbox id="txtCelular" />                                    
+				</row>
+				<row>
+					<label value="Nombre Campaña:"  />                    
+                    <textbox  id="txtTwitter" width="354px" />                    
+				</row>
+				<row>
+					<label value="Ciudad:"  />                    
+                    <textbox  id="txtCiudad" width="354px" />                    
+				</row>
+				<row>
+					<label value="Estado:"  />                    
+                    <textbox  id="txtEstado" width="354px" />                    
+				</row>
+				<row>
+					<label value="Pais:"  />                    
+                    <textbox  id="txtPais" width="354px" />                    
+				</row>
+				<row>
+					<label value="Twitter"></label>
+					<div>					
+					<checkbox id="ckboxLara" label="Lara"></checkbox>
+					<checkbox id="ckboxCaracas" label="Caracas"></checkbox>
+					<checkbox id="ckboxMiranda" label="Miranda"></checkbox>
+					<checkbox id="ckboxMerida" label="Merida"></checkbox>
+					<checkbox id="ckboxCarabobo" label="Carabobo"></checkbox>
+					<checkbox id="ckboxZulia" label="Zulia"></checkbox>
+					<checkbox id="ckboxPanama" label="Panama"></checkbox>
+					</div>
+				</row>
+			</rows>		
+		</grid>
+		<space></space>
+		<div align="center">
+				<button id="btnGuardar" label="Guardar" onClick=""></button>
+				<button id="btnCancelar" label="Cancelar" onClick=""></button>
+		</div>
+	</div>
+	</window>
+<script type="text/javascript" src="/js/jquery.watermarkinput.js" >
+        zk.afterMount(function() {
+        
+            jq("$txtNombre").Watermark("Nombre","gray");
+            jq("$txtApellido").Watermark("Apellido","gray");
+     
+        });
+ </script>
+</zk>

@@ -1,0 +1,41 @@
+<?page title="Anuncios" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windAnuncios" title="Anuncios" border="normal" height="auto" apply="controladores.anuncios">
+	<borderlayout height="800px" apply="">		
+		<center  border="none"  >
+			<div align="left">
+					
+					<hbox>
+						<vbox > 
+							<combobox id="cmbAnuncios" readonly="true"></combobox>
+						</vbox>										
+						<vbox>
+							<button id="btnNuevo" label="Nuevo"></button>		
+						</vbox>
+						
+					</hbox>
+					<space></space>
+				
+					<groupbox mold="3d" closable="false"  >			
+					<div align="center">
+						<listbox id="listaAnuncios" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10">
+							<listhead id="listAnuncio" sizable="true">
+								<listheader align="center" label="Nro" width="5%" sort="auto" />
+								<listheader align="center" label="Twitter" width="10%" sort="auto" />
+								<listheader  align="center" label="Anuncio" width="85%"	sort="auto" />								
+							</listhead>
+						</listbox>
+					</div>
+		
+				</groupbox>					
+			<button id="btnGenerar" label="Generar"></button>
+			
+			</div>
+			
+		
+		</center>
+		<east id="east" border="none"></east>
+	</borderlayout>
+</window>
+</zk>

@@ -1,0 +1,55 @@
+<?page title="Registrar Anuncios" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window id="windRegistrarAnuncios" title="Registrar Anuncios" border="normal" width="900px" apply="controladores.registrar_anuncios">
+<div>	
+		<grid>
+			<columns>
+				<column width="200px"/>
+                <column  />
+			</columns>
+			<rows>
+				<row>
+					<label value="Campaña"></label>
+					<combobox id="cmbContactos"></combobox>
+				</row>
+				<row>
+					<label  value="Numero:"  />
+					<intbox id="txtNumero" width="50px"/>                                    
+                                       
+				</row>				
+				
+				<row>
+					<label value="Anuncio:"  />					
+					<textbox  id="txtAnuncio" width="600px" height="70px" rows="3" maxlength="163" />					
+				</row>						
+				
+			</rows>		
+		</grid>
+		<div align="center">
+				<button id="btnAñadir" label="Añadir" onClick=""></button>
+				<button id="btnModificar" label="Modificar" onClick="" visible="false"></button>
+				<button id="btnActivar" label="Activar" onClick="" visible="false"></button>
+				<button id="btnInactivar" label="Inactivar" onClick="" visible="false"></button>
+				<button id="btnCancelar" label="Cancelar" onClick=""></button>
+		</div>
+		<groupbox mold="3d" closable="false"  >			
+					<div align="center">
+						<listbox id="listaAnuncios" multiple="false" width="100%"
+							mold="paging" pagingPosition="bottom" pageSize="10">
+							<listhead sizable="true">
+								<listheader sort="auto" visible="false"/>
+								<listheader align="center" label="Nro" width="5%" sort="auto" />
+								<listheader align="center" label="Anuncio" width="85%"	sort="auto" />
+								<listheader align="center" label="Estatus" width="10%"	sort="auto" />								
+							</listhead>
+						</listbox>
+					</div>
+		</groupbox>
+		<div>
+			<button id="btnAceptar" label="Aceptar" onClick=""></button>
+		</div>
+		
+		
+	</div>
+</window>
+</zk>
