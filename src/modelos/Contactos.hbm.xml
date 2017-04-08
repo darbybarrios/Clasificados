@@ -59,8 +59,8 @@
         <property name="panama" type="java.lang.Boolean">
             <column name="panama" />
         </property>
-        <property name="todos" type="java.lang.Boolean">
-            <column name="todos" />
+        <property name="chile" type="java.lang.Boolean">
+            <column name="chile" />
         </property>        
         <set name="anuncioses" table="anuncios" inverse="true" lazy="true" fetch="select">
             <key>

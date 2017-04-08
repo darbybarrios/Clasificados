@@ -30,6 +30,7 @@ public class editar_contacto extends GenericForwardComposer{
 	Checkbox ckboxCarabobo;
 	Checkbox ckboxZulia;
 	Checkbox ckboxPanama;
+	Checkbox ckboxChile;
 	String estatus;
 	Button btnActivar;
 	Button btnInactivar;
@@ -66,6 +67,7 @@ public class editar_contacto extends GenericForwardComposer{
 			ckboxCarabobo.setChecked(Boolean.valueOf(lista.get(0)[15].toString()));			
 			ckboxZulia.setChecked(Boolean.valueOf(lista.get(0)[16].toString()));			
 			ckboxPanama.setChecked(Boolean.valueOf(lista.get(0)[17].toString()));
+			ckboxChile.setChecked(Boolean.valueOf(lista.get(0)[18].toString()));
 			
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
@@ -94,6 +96,7 @@ public class editar_contacto extends GenericForwardComposer{
 		contacto.setCarabobo(ckboxCarabobo.isChecked());
 		contacto.setZulia(ckboxZulia.isChecked());
 		contacto.setPanama(ckboxPanama.isChecked());
+		contacto.setChile(ckboxChile.isChecked());
 		contacto.Modificar(contacto);
 		Messagebox.show("Contacto Modificado Exitosamente", "Mensaje", Messagebox.OK,Messagebox.INFORMATION);
 		if(estatus.equals("IN")){

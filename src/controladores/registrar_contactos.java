@@ -24,6 +24,7 @@ public class registrar_contactos extends GenericForwardComposer {
 	Checkbox ckboxCarabobo;
 	Checkbox ckboxZulia;
 	Checkbox ckboxPanama;
+	Checkbox ckboxChile;
 	Window windNuevoContacto;
 	
 	public void onClick$btnGuardar() throws Exception{
@@ -45,7 +46,8 @@ public class registrar_contactos extends GenericForwardComposer {
 		contacto.setMerida(ckboxMerida.isChecked());
 		contacto.setCarabobo(ckboxCarabobo.isChecked());
 		contacto.setZulia(ckboxZulia.isChecked());
-		contacto.setPanama(ckboxPanama.isChecked());	
+		contacto.setPanama(ckboxPanama.isChecked());
+		contacto.setChile(ckboxChile.isChecked());
 		contacto.incluir(contacto);
 		limpiar();
 		onClick$btnCancelar();

@@ -11,8 +11,8 @@
 				<row>
 					<label  value="Contacto Principal:"  />
 					<div>
-						<textbox id="txtNombre" constraint="no empty"/>
-	                    <textbox id="txtApellido" />
+						<textbox id="txtNombre" constraint="no empty" placeholder="Nombre"/>
+	                    <textbox id="txtApellido" placeholder="Apellido" />
                     </div>                    
                                        
 				</row>
@@ -54,6 +54,7 @@
 					<checkbox id="ckboxCarabobo" label="Carabobo"></checkbox>
 					<checkbox id="ckboxZulia" label="Zulia"></checkbox>
 					<checkbox id="ckboxPanama" label="Panama"></checkbox>
+					<checkbox id="ckboxChile" label="Chile"></checkbox>
 					</div>
 				</row>
 			</rows>		
@@ -65,12 +66,5 @@
 		</div>
 	</div>
 	</window>
-<script type="text/javascript" src="/js/jquery.watermarkinput.js" >
-        zk.afterMount(function() {
-        
-            jq("$txtNombre").Watermark("Nombre","gray");
-            jq("$txtApellido").Watermark("Apellido","gray");
-     
-        });
- </script>
+
 </zk>

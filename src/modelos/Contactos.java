@@ -31,7 +31,7 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 	private Boolean carabobo;
 	private Boolean zulia;
 	private Boolean panama;
-	private Boolean todos;
+	private Boolean chile;
 	private Set anuncioses = new HashSet(0);
 
 	public Contactos() {
@@ -45,7 +45,7 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 			String fijo, String celular, String direccion, String ciudad,
 			String estado, String pais, String estatus,Boolean lara, Boolean caracas, Boolean miranda,
 			Boolean merida, Boolean carabobo, Boolean zulia, Boolean panama,
-			Boolean todos, Set anuncioses) {
+			Boolean chile, Set anuncioses) {
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido = apellido;
@@ -64,7 +64,7 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 		this.carabobo = carabobo;
 		this.zulia = zulia;
 		this.panama = panama;
-		this.todos = todos;
+		this.chile = chile;
 		this.anuncioses = anuncioses;
 	}
 
@@ -216,12 +216,12 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 		this.panama = panama;
 	}
 
-	public Boolean getTodos() {
-		return this.todos;
+	public Boolean getChile() {
+		return this.chile;
 	}
 
-	public void setTodos(Boolean todos) {
-		this.todos = todos;
+	public void setChile(Boolean chile) {
+		this.chile = chile;
 	}
 
 	public void setAnuncioses(Set anuncioses) {
@@ -244,7 +244,7 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 		List <Object[]> lista = null;
 		try{		
 		String sql = "select a.id, a.nombre, a.apellido, a.empresa, a.fijo, a.celular, a.direccion, a.ciudad, a.estado, a.pais, a.estatus, " +
-				"a.lara, a.caracas, a.miranda, a.merida, a.carabobo, a.zulia, a.panama, a.todos " +
+				"a.lara, a.caracas, a.miranda, a.merida, a.carabobo, a.zulia, a.panama, a.chile " +
 				"from Contactos a where " +
 				"a.id = "+id+"";
 		lista = (List<Object[]>) Consultar(sql);
@@ -258,7 +258,7 @@ public class Contactos extends ManejarEntidades implements java.io.Serializable 
 	public List <Object[]> SelecionarTwiter(Integer id) throws Exception{
 		List <Object[]> lista = null;
 		try{		
-		String sql = "select a.lara, a.caracas, a.miranda, a.merida, a.carabobo, a.zulia, a.panama, a.todos " +
+		String sql = "select a.lara, a.caracas, a.miranda, a.merida, a.carabobo, a.zulia, a.panama, a.chile " +
 				"from Contactos a where " +
 				"a.id = "+id+"";
 		lista = (List<Object[]>) Consultar(sql);
